@@ -12,7 +12,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			],
+			info: ["Info de contactos"]
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -23,6 +24,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
+			},
+			getContacts:() =>{
+				fetch("https://playground.4geeks.com/contact/agendas/wiston/contacts")
+				.then(()=>{})
+				.then(()=>{})
+				.catch(()=>{})
+
+
 			},
 			changeColor: (index, color) => {
 				//get the store
